@@ -1,8 +1,9 @@
-@mixin imagejpg($bg){
+@mixin imagewebp($bg){
     background: {
-        image: url("../img/#{$bg}.jpg");
+        image: url("../img/#{$bg}.webp");
         size: cover;
         position: center;
+        width: 50%;
     }
 }
 

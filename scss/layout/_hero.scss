@@ -1,0 +1,32 @@
+@use "../abstracts/colors" as c;
+@use "../abstracts/mixins" as m;
+
+.hero{
+
+    display: flex;
+    position: relative;
+
+    .logo{
+        position: absolute;
+        color: c.$accent-color;
+        font-size: 3.75em;
+        text-transform: uppercase;
+        top: 20px;
+        left: 30px;
+        font-family: "raleway";
+        font-weight: 800;
+    }
+
+    .hero-left{
+        width:30%;
+        height: 100vh;
+        background-color: c.$white;
+    }
+
+    .hero-right-img{
+        width: 70%;
+        height: 100vh;
+        // background-color: c.$accent-blue;
+        @include m.imagewebp(hero-img);
+    }
+}

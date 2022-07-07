@@ -1,4 +1,4 @@
-@use '../abstracts/colors' as c;
+// @use '../abstracts/colors' as c;
 
 *,
 *::before,
@@ -17,15 +17,15 @@ html{
     scroll-behavior: smooth;
 }
 
-html,
-body{
-    overflow-x: hidden;
-}
+// html,
+// body{
+//     overflow-x: hidden;
+// }
 
-body{
-    background-color: c.$mid-blue;
-    color: c.$white;
-}
+// body{
+//     background-color: c.$dark-blue;
+//     color: c.$white;
+// }
 
 
 // ENABLE AND CHANGE THE FOCUS COLORS DEPENDING ON YOUR DESIGN
