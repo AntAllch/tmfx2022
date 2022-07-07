@@ -1,0 +1,42 @@
+@use '../abstracts/colors' as c;
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+}
+
+body,
+input,
+textarea{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+html,
+body{
+    overflow-x: hidden;
+}
+
+body{
+    background-color: c.$accent-blue;
+}
+
+
+// ENABLE AND CHANGE THE FOCUS COLORS DEPENDING ON YOUR DESIGN
+
+// :focus{
+//     outline: 3px solid rgb(132, 130, 255);
+//     outline-offset: 3px;
+// }
+
+
+// ENABLE THIS OUTLINE FOR DEBUGGING PURPOSES, E.G. HORIZONTAL SCROLLING
+
+// *{
+//     outline: 2px solid red;
+// }
