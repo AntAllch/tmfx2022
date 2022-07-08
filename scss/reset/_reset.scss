@@ -1,5 +1,3 @@
-// @use '../abstracts/colors' as c;
-
 *,
 *::before,
 *::after{
@@ -15,6 +13,7 @@ textarea{
 
 html{
     scroll-behavior: smooth;
+    font-family: 'Raleway', sans-serif;
 }
 
 // html,

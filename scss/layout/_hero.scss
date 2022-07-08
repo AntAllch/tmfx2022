@@ -5,22 +5,72 @@
 
     display: flex;
     position: relative;
+            text-transform: uppercase;
+            // text-transform: uppercase;
 
     .logo{
         position: absolute;
+        top: 20px;
+        left: 30px;
         color: c.$accent-color;
         font-size: 3.75em;
         text-transform: uppercase;
-        top: 20px;
-        left: 30px;
-        font-family: "raleway";
         font-weight: 800;
     }
 
-    .hero-left{
-        width:30%;
+    .hero-text{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 13.75em;
+
+        span:first-of-type{ //FR
+            margin-left: .9em;
+        }
+
+        span{
+            color: red;
+        }
+
+        .hero-title{ //FREE YOURSELF
+            font-size: 10em;
+            line-height: 0.9;
+            color: c.$white
+        }
+
+        .hero-title, .hero-subtitle{
+            font-weight: 800;
+        }
+    }
+    
+    .hero-left{ //WHITE BLOCK
+        width: 36em;
         height: 100vh;
         background-color: c.$white;
+
+        .page-tag{ //HOME
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+            writing-mode: vertical-rl;
+            position: relative;
+            margin-top: 70%;
+            // top: 50%;
+            left: 30px;
+            // transform: translateY(-50%);
+    
+            &::before{
+                content: "";
+                width: 4px;
+                height: 464px;
+                background-color: c.$black;
+                position: absolute;
+                top: 65px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
     }
 
     .hero-right-img{
