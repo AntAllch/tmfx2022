@@ -12,10 +12,10 @@ header{
 
     .logo{
         color: c.$white;
-        font-size: 2.5em;
+        font-size: 2em;
         text-transform: uppercase;
         font-weight: 800;
-        padding-left: .4em;
+        padding-left: 1em;
     }
 
 }
@@ -37,15 +37,27 @@ header{
 
             text-align: center;
 
-            .hero-title, .hero-subtitle{
+            .hero-mobile-title, .hero-subtitle{
                 color: c.$white;
                 text-transform: uppercase;
                 font-weight: 800;
             }
+
+            .hero-mobile-title{
+                font-size: 2.35em;
+                line-height: 1;
+                margin-bottom: 1rem;
+
+                span{
+                    font-size: 5rem;
+                }
+            }
     
-            .hero-title{
+            .hero-title{ //FREE YOURSELF
+                display: none;
                 font-size: 3em;
                 line-height: 0.9;
+                margin-bottom: 1rem;
             }
         }
 
