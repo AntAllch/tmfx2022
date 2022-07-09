@@ -1,31 +1,54 @@
 @use "../abstracts/colors" as c;
 @use "../abstracts/mixins" as m;
 
-.hero{
+header{
 
-    header{
+    width: 100%;
+    height: 4em;
+    background-color: c.$accent-color;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 
-        width: 100%;
-        height: 4em;
-        background-color: c.$accent-color;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-
-        .logo{
-            color: c.$white;
-            font-size: 2.5em;
-            text-transform: uppercase;
-            font-weight: 800;
-            padding-left: .4em;
-        }
-
+    .logo{
+        color: c.$white;
+        font-size: 2.5em;
+        text-transform: uppercase;
+        font-weight: 800;
+        padding-left: .4em;
     }
 
+}
+
+.hero{
+
+    
     .hero-img{
-        @include m.imagewebp(hero-img);
+        @include m.imagewbp-fade(hero-img);
         width: 100%;
         height: calc((100vh - 4em));
+        // display: flex;
+        // justify-content: flex-end;
+        // align-items: center;
+        display: grid;
+        place-items: center;
+        
+        .hero-text{
+
+            text-align: center;
+
+            .hero-title, .hero-subtitle{
+                color: c.$white;
+                text-transform: uppercase;
+                font-weight: 800;
+            }
+    
+            .hero-title{
+                font-size: 3em;
+                line-height: 0.9;
+            }
+        }
+
     }
 
 }
