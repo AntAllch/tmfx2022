@@ -1,11 +1,35 @@
 @use"./colors" as c;
 
+@mixin imagejpg($fbg){
+    background: {
+        image: url("../img/#{$fbg}.jpg");
+        size: cover;
+        position: center;
+    }
+}
+
+@mixin imagejpg-fade($fbg){
+    background: {
+        image: linear-gradient($overlay, $overlay), url("../img/#{$fbg}.jpg");
+        size: cover;
+        position: center;
+    }
+}
+
 @mixin imagewebp($bg){
     background: {
         image: url("../img/#{$bg}.webp");
         size: cover;
         position: center;
         width: 50%;
+    }
+}
+
+@mixin imagewbp-fade($fbg){
+    background: {
+        image: linear-gradient(c.$overlay, c.$overlay), url("../img/#{$fbg}.webp");
+        size: cover;
+        position: center;
     }
 }
 
@@ -25,29 +49,8 @@
     }
 }
 
-@mixin imagejpg-fadeblue($fbg){
-    background: {
-        image: linear-gradient($blue-trans, $blue-trans), url("../img/#{$fbg}.jpg");
-        size: cover;
-        position: center;
-    }
-}
 
-@mixin imagejpg-fade($fbg){
-    background: {
-        image: linear-gradient($overlay, $overlay), url("../img/#{$fbg}.jpg");
-        size: cover;
-        position: center;
-    }
-}
 
-@mixin imagewbp-fade($fbg){
-    background: {
-        image: linear-gradient(c.$overlay, c.$overlay), url("../img/#{$fbg}.webp");
-        size: cover;
-        position: center;
-    }
-}
 
 @mixin imagejpg-fadewhite($fbg){
     background: {
