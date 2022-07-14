@@ -1,0 +1,15 @@
+@use "../abstracts/colors" as c;
+
+.btn{
+    padding: 15px 20px 15px 20px;
+    text-transform: uppercase;
+    background-color: c.$accent-clr;
+    border: none;
+    font-weight: 800;
+    color: c.$white;
+    cursor: pointer;
+}
+
+.hero-btn{
+    font-size: 1.1em;
+}

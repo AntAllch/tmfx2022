@@ -27,26 +27,29 @@ header{
         @include m.imagewbp-fade(hero-img);
         width: 100%;
         height: 100vh;
-        display: grid;
-        place-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         
         .hero-text{
-
+            
             text-align: center;
+            margin-bottom: 3em;
+            font-weight: 800;
 
             .hero-mobile-title, .hero-subtitle{
                 color: c.$white;
                 text-transform: uppercase;
-                font-weight: 800;
             }
 
-            .hero-mobile-title{
-                font-size: 2.35em;
-                line-height: 1;
+            .hero-mobile-title{ //YOURSELF
+                font-size: 2.85em;
+                line-height: 0.8;
                 margin-bottom: 1rem;
 
-                span{
-                    font-size: 5rem;
+                span{ //FREE
+                    font-size: 6.25rem;
                 }
             }
     
@@ -55,6 +58,10 @@ header{
                 font-size: 3em;
                 line-height: 0.9;
                 margin-bottom: 1rem;
+            }
+
+            .hero-subtitle{
+                font-size: 1.25em;
             }
         }
 
