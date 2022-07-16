@@ -1,4 +1,5 @@
 @use "../abstracts/colors" as c;
+@use "../abstracts/transitions" as t;
 
 .btn{
     padding: 15px 20px 15px 20px;
@@ -8,6 +9,11 @@
     font-weight: 800;
     color: c.$white;
     cursor: pointer;
+    transition: t.$transition-bg-clr;
+    
+    &:hover, &:focus{
+        background-color: c.$accent-hover-clr;
+    }
 }
 
 .hero-btn{
