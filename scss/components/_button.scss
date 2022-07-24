@@ -11,8 +11,9 @@
     color: c.$white;
     cursor: pointer;
     transition: t.$transition-bg-clr;
+    font-size: 1em;
     
-    &:hover, &:focus{
+    &:hover, &:focus-visible{
         background-color: c.$accent-hover-clr;
     }
 }
@@ -23,6 +24,10 @@
     @include r.respond(desktop){ //1000px
         display: none;
     }
+}
+
+.btn__welcome{
+    font-size: 1.25em;
 }
 
 .btn__funded{
