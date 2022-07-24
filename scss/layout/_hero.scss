@@ -1,70 +1,97 @@
 @use "../abstracts/colors" as c;
 @use "../abstracts/mixins" as m;
+@use "../abstracts/responsive" as r;
 
-header{
+.hero {
+    display: none;
 
-    width: 100%;
-    height: 4em;
-    background-color: c.$white;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    position: absolute;
+    @include r.respond(desktop){ //1000px
 
-    .logo{
-        color: c.$accent-clr;
-        font-size: 2em;
-        text-transform: uppercase;
-        font-weight: 800;
-        padding-left: 1em;
-    }
-
-}
-
-.hero{
-
-    .hero-img{
-        @include m.imagewbp-fade(hero-img);
-        width: 100%;
-        height: 100vh;
         display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        
-        .hero-text{
-            
-            text-align: center;
-            margin-bottom: 3em;
+        position: relative;
+        text-transform: uppercase;
+
+        .logo{
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            color: c.$accent-clr;
+            font-size: 3.75em;
+            text-transform: uppercase;
             font-weight: 800;
+        }
 
-            .hero-mobile-title, .hero-subtitle{
-                color: c.$white;
-                text-transform: uppercase;
+        .hero-text{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-left: 13.8em;
+
+            span:first-of-type{ //FR
+                margin-left: .9em;
             }
 
-            .hero-mobile-title{ //YOURSELF
-                font-size: 2.85em;
-                line-height: 0.8;
-                margin-bottom: 1rem;
-
-                span{ //FREE
-                    font-size: 6.25rem;
-                }
+            span{
+                @include m.imagewebp(hero-img);
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
             }
-    
+
+            .hero-title, .hero-subtitle{
+                font-weight: 800;
+            }
+
             .hero-title{ //FREE YOURSELF
-                display: none;
-                font-size: 3em;
+                font-size: 10rem;
+                font-size: clamp(1rem, 12vw + 12rem, 10rem);
                 line-height: 0.9;
-                margin-bottom: 1rem;
+                color: c.$white
             }
 
             .hero-subtitle{
-                font-size: 1.25em;
+                font-size: 1.75rem;
+            }
+
+        }
+        
+        .hero-left{ //WHITE BLOCK
+            width: 576px;
+            max-width: 576px;
+            height: 100vh;
+            background-color: c.$white;
+            position: absolute;
+
+            .page-tag{ //HOME
+                font-weight: 800;
+                text-transform: uppercase;
+                font-size: 1.1em;
+                letter-spacing: 1px;
+                writing-mode: vertical-rl;
+                position: relative;
+                margin-top: 70%;
+                left: 30px;
+                // transform: translateY(100%);
+        
+                &::before{ //LONG BLACK BAR COMING FROM "HOME"
+                    content: "";
+                    width: 4px;
+                    height: 300px;
+                    background: linear-gradient(to bottom, c.$black, rgba(0, 0, 0, 0));
+                    position: absolute;
+                    top: 65px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
             }
         }
 
-    }
+        .hero-right-img{
+            width: 70%;
+            height: 100vh;
+            margin-left: auto;
+            @include m.imagewebp(hero-img);
+        }
 
+    }
 }

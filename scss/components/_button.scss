@@ -1,5 +1,6 @@
 @use "../abstracts/colors" as c;
 @use "../abstracts/transitions" as t;
+@use "../abstracts/responsive" as r;
 
 .btn{
     padding: 15px 20px 15px 20px;
@@ -16,6 +17,14 @@
     }
 }
 
-.hero-btn{
+.btn__hero{
     font-size: 1.1em;
+
+    @include r.respond(desktop){ //1000px
+        display: none;
+    }
+}
+
+.btn__funded{
+    background-color: c.$dark-grey;
 }
