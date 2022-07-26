@@ -1,0 +1,86 @@
+@use "../abstracts/colors" as c;
+@use "../abstracts/responsive" as r;
+@use "../abstracts/typography" as t;
+
+.accounts{
+
+    margin: 0 auto 4rem;
+    width: min(calc(100vw - 3.75rem), 1000px);
+
+    .accounts-title{
+        font-size: clamp(1rem, 3vw + 0.2rem, 1.5rem);
+        text-transform: uppercase;
+        font-weight: 800;
+        margin-bottom: 1.5em;
+    }
+
+    .accounts-cards{
+
+        color: c.$white;
+
+        .account-card{
+
+            text-align: center;
+            background-color: c.$accent-clr;
+            padding: 2em 1em;
+            max-width: 280px;
+
+            span , .account-card__fee{
+                font-weight: t.$fw-extrabold;
+            }
+
+            .account-card__heading, .account-card__subheading, .account-card__fees{
+                text-transform: uppercase;    
+            }
+
+            .account-card__funding,
+            .account-card__desc,
+            .account-card__fees{
+                margin-bottom: 1.5em;
+            }
+
+            .account-card__subheading, .account-card__heading{
+                font-size: 1em;
+                font-weight: t.$fw-bold;
+            }
+
+            .account-card__funding{
+
+                .account-card__heading{
+                    margin-bottom: 0.5em;
+                    font-size: 1.2em;
+
+                    span{
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+
+            .account-card__criteria{
+
+                .account-card__desc-group{
+
+                    .account-card__desc{
+
+                        p{
+                            background-color: red;
+                        }
+                    }
+                }
+            }
+
+            .account-card__fees{
+                
+                .account-card__fee{
+                    margin-bottom: 0.5em;
+                }
+
+                p:nth-of-type(2){
+                    font-weight: t.$fw-bold;
+                }
+            }
+        }
+
+    }
+
+}
