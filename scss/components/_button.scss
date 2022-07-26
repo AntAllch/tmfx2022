@@ -19,17 +19,18 @@
 }
 
 .btn__hero{
-    font-size: 1.1em;
+    font-size: 1em;
 
     @include r.respond(desktop){ //1000px
         display: none;
     }
 }
 
-.btn__welcome{
-    font-size: 1.25em;
-}
+// .btn__welcome{
+//     font-size: 1em;
+// }
 
 .btn__funded{
     background-color: c.$dark-grey;
+    font-weight: 500;
 }

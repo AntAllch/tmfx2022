@@ -4,6 +4,7 @@
 
 .hero {
     display: none;
+    overflow: hidden;
 
     @include r.respond(desktop){ //1000px
 
