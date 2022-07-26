@@ -29,12 +29,14 @@
                 font-weight: t.$fw-extrabold;
             }
 
-            .account-card__heading, .account-card__subheading, .account-card__fees{
+            .account-card__heading,
+            .account-card__subheading,
+            .account-card__fees{
                 text-transform: uppercase;    
             }
 
             .account-card__funding,
-            .account-card__desc,
+            .account-card__desc-group,
             .account-card__fees{
                 margin-bottom: 1.5em;
             }
@@ -58,13 +60,16 @@
 
             .account-card__criteria{
 
-                .account-card__desc-group{
+                .account-card__desc-groups{
 
-                    .account-card__desc{
+                    .account-card__desc-group{
 
-                        p{
+                        .account-card__desc{
+
                             background-color: red;
+                            
                         }
+
                     }
                 }
             }
