@@ -5,27 +5,35 @@
 .accounts{
 
     margin: 0 auto 4rem;
-    width: min(calc(100vw - 3.75rem), 1000px);
+    width: min(calc(100vw - 3.75rem), 73em);
 
     .accounts-title{
         font-size: clamp(1rem, 3vw + 0.2rem, 1.5rem);
         text-transform: uppercase;
         font-weight: 800;
         margin-bottom: 1.5em;
+        text-align: center;
+
+        @include r.respond(desktop){
+            text-align: left;
+        }
     }
 
     .accounts-cards{
 
         color: c.$white;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 17.5rem));
+        justify-content: center;
+        gap: 1em;
 
         .account-card{
 
             text-align: center;
             background-color: c.$accent-clr;
             padding: 2em 1em;
-            max-width: 280px;
 
-            span , .account-card__fee{
+            span, .account-card__fee{
                 font-weight: t.$fw-extrabold;
             }
 
@@ -78,10 +86,12 @@
                 
                 .account-card__fee{
                     margin-bottom: 0.5em;
+                    font-size: 1.1em;
                 }
 
                 p:nth-of-type(2){
                     font-weight: t.$fw-bold;
+                    font-size: 0.9em;
                 }
             }
         }
