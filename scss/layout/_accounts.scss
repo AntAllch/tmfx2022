@@ -42,7 +42,7 @@
             }
 
             .account-card__subheading, .account-card__heading{
-                font-size: 1em;
+                font-size: 0.9em;
                 font-weight: t.$fw-bold;
             }
 
@@ -50,7 +50,7 @@
 
                 .account-card__heading{
                     margin-bottom: 0.5em;
-                    font-size: 1.2em;
+                    font-size: 1.1em;
 
                     span{
                         font-size: 1.5rem;
@@ -66,8 +66,8 @@
 
                         .account-card__desc{
 
-                            background-color: red;
-                            
+                            // background-color: red;
+                            font-size: 0.9em;
                         }
 
                     }
