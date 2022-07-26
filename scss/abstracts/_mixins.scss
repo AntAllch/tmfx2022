@@ -2,7 +2,7 @@
 
 @mixin imagejpg($fbg){
     background: {
-        image: url("../img/#{$fbg}.jpg");
+        image: url("/img/#{$fbg}.jpg");
         size: cover;
         position: center;
     }
@@ -10,7 +10,7 @@
 
 @mixin imagejpg-fade($fbg){
     background: {
-        image: linear-gradient($overlay, $overlay), url("../img/#{$fbg}.jpg");
+        image: linear-gradient($overlay, $overlay), url("/img/#{$fbg}.jpg");
         size: cover;
         position: center;
     }
@@ -18,7 +18,7 @@
 
 @mixin imagewebp($bg){
     background: {
-        image: url("../img/#{$bg}.webp");
+        image: url("/img/#{$bg}.webp");
         size: cover;
         position: center;
         width: 50%;
@@ -27,7 +27,7 @@
 
 @mixin imagewbp-fade($fbg){
     background: {
-        image: linear-gradient(c.$overlay, c.$overlay), url("../img/#{$fbg}.webp");
+        image: linear-gradient(c.$overlay, c.$overlay), url("/img/#{$fbg}.webp");
         size: cover;
         position: center;
     }
@@ -35,7 +35,7 @@
 
 @mixin imagepng($bg){
     background: {
-        image: url("../img/#{$bg}.png");
+        image: url("/img/#{$bg}.png");
         size: cover;
         position: center;
     }
@@ -54,7 +54,7 @@
 
 @mixin imagejpg-fadewhite($fbg){
     background: {
-        image: linear-gradient($white-trans, $white-trans), url("../img/#{$fbg}.jpg");
+        image: linear-gradient($white-trans, $white-trans), url("/img/#{$fbg}.jpg");
         size: cover;
         position: center;
     }
