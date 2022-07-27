@@ -1,0 +1,65 @@
+@use "../abstracts/colors" as c;
+@use "../abstracts/typography" as t;
+@use "../abstracts/responsive" as r;
+
+.growth{
+    display: none;
+
+    @include r.respond(desktop){
+        display: block;
+        background-color: c.$accent-clr;
+        text-align: center;
+        width: min(calc(100% - 4rem), 73rem);
+        margin: 0 auto 6rem;
+        padding: 1.25em 0;
+        color: c.$white;
+    
+        .growth-title{
+            text-transform: uppercase;
+            font-weight: t.$fw-extrabold;
+            color: c.$white;
+            font-size: t.$fs-medium;
+            margin-bottom: 1rem;
+        }
+        
+        .growth-scheme-disclaimer{
+            font-size: t.$fs-small;
+            margin: 1em 0;
+        }
+        
+        .growth-scheme-groups{
+    
+            display: flex;
+            justify-content: space-evenly;
+            
+            .growth-scheme-group{
+                
+                font-size: t.$fs-small;
+                width: 100%;
+                
+                // .column{
+                //     border-style: solid;
+                //     // border-width: 3px;
+                //     border-image: 
+                //     linear-gradient(to bottom,rgba(0, 0, 0, 0), c.$black, rgba(0, 0, 0, 0)) 1;
+                //     border-width: 0 3px 0 0;
+
+                // }
+
+                .growth-scheme__title, .growth-scheme__desc{
+                    text-transform: uppercase;
+                    margin-bottom: 1.25em;
+                }
+                
+                .growth-scheme__title{
+                    background-color: c.$white;
+                    padding: 0.5em 0;
+                    color: c.$black;
+                    font-weight: t.$fw-extrabold;
+                }
+                
+            }
+            
+        }
+    }
+}

@@ -3,7 +3,7 @@
 @use "../abstracts/typography" as t;
 
 .welcome{
-    margin: 4rem auto;
+    margin: 6rem auto;
     width: min(calc(100vw - 3.75rem), 550px);
 
     @include r.respond(desktop){
@@ -37,15 +37,6 @@
     }
        
     .welcome-text{
-        // display: flex;
-        // flex-direction: column;
-        // align-items: center;
-        // text-align: center;
-
-        // @include r.respond(desktop){
-        //     text-align: left;
-        //     display: block;
-        // }
 
         .title, .mobile-welcome, .first-subtitle, .second-subtitle{
             text-transform: uppercase;
@@ -57,7 +48,7 @@
             
             @include r.respond(desktop){
                 display: block;
-                font-size: t.$fs-l;
+                font-size: t.$fs-large;
                 font-weight: 800;
             }
         }
@@ -82,7 +73,7 @@
             font-size: clamp(1rem, 3vw + 0.2rem, 1.5rem);
 
             @include r.respond(desktop){
-                font-size: 1.75em;
+                font-size: t.$fs-medium;
             }
         }
     
