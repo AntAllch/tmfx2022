@@ -1,5 +1,6 @@
 @use "../abstracts/colors" as c;
 @use "../abstracts/responsive" as r;
+@use "../abstracts/typography" as t;
 
 .welcome{
     margin: 4rem auto;
@@ -56,7 +57,7 @@
             
             @include r.respond(desktop){
                 display: block;
-                font-size: 2.4rem;
+                font-size: t.$fs-l;
                 font-weight: 800;
             }
         }
