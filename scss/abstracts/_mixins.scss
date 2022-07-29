@@ -1,5 +1,13 @@
 @use"./colors" as c;
 
+@mixin imagesvg($fbg){
+    background: {
+        image: url("/img/#{$fbg}.svg");
+        size: cover;
+        position: top;
+    }
+}
+
 @mixin imagejpg($fbg){
     background: {
         image: url("/img/#{$fbg}.jpg");
