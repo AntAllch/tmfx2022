@@ -7,10 +7,13 @@ $accent-padding: 1.3rem;
 
 .testimonials{
     width: min(calc(100% - 4rem), 73rem);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 0 auto 6rem;
     text-align: center;
     padding-block: 4rem;
+    
+    @include r.respond(tablet){
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
     @include r.respond(desktop){
         padding-block: 6rem;
@@ -44,6 +47,12 @@ $accent-padding: 1.3rem;
         .testimonial-heading{
             font-weight: t.$fw-bold;
             font-size: clamp(1.25rem, 3.9vw + 0.2rem, 1.5rem);
+            max-width: 24ch;
+            margin: 0 auto;
+
+            @include r.respond(tablet){
+                max-width: initial;
+            }
         }
         .testimonial-title{
             font-weight: t.$fw-medium;
