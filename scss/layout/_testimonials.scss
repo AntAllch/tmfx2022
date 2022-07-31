@@ -69,19 +69,6 @@ $accent-padding: 1.3rem;
         grid-template-columns: repeat(auto-fit, minmax(15rem, 17.5rem));
         justify-content: center;
 
-        // .card-img__first{
-        //     @include m.imagesvg(test-img2);
-        // }
-
-        // .card-img__second{
-        //     @include m.imagesvg(test-img2);
-        // }
-
-        // .card-img__third{
-        //     @include m.imagesvg(test-img1); 
-        //     background-position: top;               
-        // }
-
         .testimonial-card{
 
             margin: 4rem auto 0;
@@ -90,7 +77,7 @@ $accent-padding: 1.3rem;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             position: relative;
 
-            &::before{
+            &::before{ //Blue bar
                 content: "";
                 width: 100%;
                 height: 90px;
@@ -101,11 +88,11 @@ $accent-padding: 1.3rem;
                 right: 0;
             }
 
-            &::after{
+            &::after{ //Quotation marks
                 content: url("/img/quotes.png");
                 transform: scale(0.04);
                 position: absolute;
-                top: -22%;
+                top: -19%;
                 left: -80%;
                 right: 0;
             }
