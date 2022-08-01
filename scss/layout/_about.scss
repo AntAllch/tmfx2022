@@ -1,0 +1,121 @@
+@use "../abstracts/mixins" as m;
+@use "../reset/reset" as x;
+@use "../abstracts/colors" as c;
+@use "../abstracts/typography" as t;
+@use "../abstracts/responsive" as r;
+
+.about{
+    padding: 4rem 2rem; //padding top and bottom
+    text-align: center;
+    background-color: c.$accent-clr;
+    color: c.$white;
+    
+    @include r.respond(desktop){
+        margin: 0 auto 6rem;
+        background: c.$white;
+        color: c.$black;
+        max-width: 700px;
+        position: relative;
+        text-align: left;
+        display: grid;
+        grid-template-areas: 
+        "image title"
+        "image subtitle"
+        "image desc"
+        "image logo";
+    }
+
+    .about-title{ //Hello, I'm Tommy
+        font-size: clamp(t.$fs-medium, 6vw, t.$fs-extralarge);
+        font-weight: t.$fw-extrabold;
+
+        @include r.respond(desktop){
+            background-color: c.$white;
+            height: fit-content;
+            margin: 20px 0 0 -190px; //This moves the text to the left (over the image)
+            z-index: 1;
+            padding: 1rem;
+            line-height: 1;
+            display: grid;
+            place-items: center;
+            box-shadow: x.$box-shadow;
+            grid-area: title;
+
+        }
+    }
+
+    .about-subtitle{ //Founder of TM-FX
+        font-weight: t.$fw-medium;
+        font-size: clamp(1rem, 4.7vw, t.$fs-medium);
+        margin-bottom: 1rem;
+        
+        @include r.respond(desktop){
+            margin-bottom: -1rem;
+            grid-area: subtitle;
+        }
+    }
+
+    .about-img{ //Image of Tommy
+        border: 5px solid c.$white;
+        width: 300px;
+        height: 500px;
+        margin: 0 auto;
+        object-fit: cover;
+        box-shadow: x.$box-shadow;
+        margin-bottom: 2rem;
+        @include m.imagejpg(portrait);
+        
+        @include r.respond(desktop){
+            margin: 0 1rem 0 0;
+            grid-area: image;
+        }
+    }
+
+    .about-desc{ //Since becoming a Forex Trader....
+        max-width: 40ch;
+        margin: 0 auto;
+
+        @include r.respond(desktop){
+            max-width: 30ch;
+            margin: 0;
+            grid-area: desc;
+        }
+    }
+
+    .logo-group{ 
+        display: none;
+
+        @include r.respond(desktop){
+            display: grid;
+            place-items: center;
+            background-color: c.$accent-clr;
+            color: c.$white;
+            padding: 1.5rem 1.5rem 2rem;
+            line-height: 1;
+            position: relative;
+            box-shadow: x.$box-shadow;
+            grid-area: logo;
+
+            &::before{
+                content: "";
+                width: calc(100% - 10px);
+                height: calc(100% - 10px);
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                outline: 5px solid c.$white;
+            }
+
+            .logo-title{ //TM-FX
+                font-size: t.$fs-extralarge;
+                font-weight: t.$fw-extrabold;
+            }
+
+            .logo-subtitle{ //FUNDING MADE SIMPLE
+                font-size: 0.94rem;
+                font-weight: t.$fw-medium;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

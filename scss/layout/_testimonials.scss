@@ -2,6 +2,7 @@
 @use "../abstracts/typography" as t;
 @use "../abstracts/responsive" as r;
 @use "../abstracts/mixins" as m;
+@use "../reset/reset" as x;
 
 $accent-padding: 1.3rem;
 
@@ -12,7 +13,7 @@ $accent-padding: 1.3rem;
     padding-block: 4rem;
     
     @include r.respond(tablet){
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        box-shadow: x.$box-shadow;
     }
 
     @include r.respond(desktop){
