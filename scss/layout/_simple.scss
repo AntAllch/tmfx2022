@@ -3,11 +3,12 @@
 
 .simple{
     width: min(calc(100vw - 3.75rem), 41.25rem);
-    margin: 0 auto 6rem;
+    margin: 10rem auto 6rem;
     text-align: center;
     
-    // @include r.respond(desktop){
-    // }
+    @include r.respond(tablet){
+        margin-top: 0;
+    }
     
     .simple-title, .simple-desc{
         margin-bottom: 1.5rem;
