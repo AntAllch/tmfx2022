@@ -8,9 +8,9 @@ $accent-padding: 1.3rem;
 
 .testimonials{
     width: min(calc(100% - 4rem), 73rem);
-    margin: 0 auto 6rem;
+    margin: 0 auto;
     text-align: center;
-    padding-block: 4rem;
+    padding-block: 4rem 6rem;
     
     @include r.respond(tablet){
         box-shadow: x.$box-shadow;

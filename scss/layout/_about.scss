@@ -5,13 +5,15 @@
 @use "../abstracts/responsive" as r;
 
 .about{
-    padding: 4rem 2rem; //padding top and bottom
+    padding: 0 2rem; //padding top and bottom
     text-align: center;
-    background-color: c.$accent-clr;
-    color: c.$white;
+    margin-bottom: 5rem;
     
+    @include r.respond(tablet){
+        margin: 6rem auto; //margin top/bottom, left/right
+    }
+
     @include r.respond(desktop){
-        margin: 0 auto 6rem;
         background: c.$white;
         color: c.$black;
         max-width: 700px;
@@ -28,11 +30,12 @@
     .about-title{ //Hello, I'm Tommy
         font-size: clamp(t.$fs-medium, 6vw, t.$fs-extralarge);
         font-weight: t.$fw-extrabold;
+        // text-transform: uppercase;
 
         @include r.respond(desktop){
-            background-color: c.$white;
             height: fit-content;
             margin: 20px 0 0 -190px; //This moves the text to the left (over the image)
+            background-color: c.$white;
             z-index: 1;
             padding: 1rem;
             line-height: 1;
@@ -47,7 +50,6 @@
     .about-subtitle{ //Founder of TM-FX
         font-weight: t.$fw-medium;
         font-size: clamp(1rem, 4.7vw, t.$fs-medium);
-        margin-bottom: 1rem;
         
         @include r.respond(desktop){
             margin-bottom: -1rem;
@@ -62,7 +64,7 @@
         margin: 0 auto;
         object-fit: cover;
         box-shadow: x.$box-shadow;
-        margin-bottom: 2rem;
+        margin-block: 2rem; //margin top and bottom
         @include m.imagejpg(portrait);
         
         @include r.respond(desktop){
