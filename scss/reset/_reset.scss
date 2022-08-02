@@ -1,3 +1,5 @@
+@use "../abstracts/colors" as c;
+
 *,
 *::before,
 *::after{
@@ -22,8 +24,7 @@ $box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 // }
 
 // body{
-//     background-color: c.$dark-blue;
-//     color: c.$white;
+//     // overflow: hidden;
 // }
 
 

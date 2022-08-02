@@ -1,0 +1,85 @@
+@use "../abstracts/typography" as t;
+@use "../abstracts/colors" as c;
+@use "../abstracts/responsive" as r;
+
+.guidelines{
+    margin-bottom: 4rem;
+
+    @include r.respond(tablet){
+        margin-bottom: 6rem;
+    }
+    
+    .logo-wrapper{
+        background-color: c.$accent-clr;
+        color: c.$white;
+        padding-block: 1.5rem;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 3rem;
+        
+        .guidelines-logo{ //TM-FX
+            font-size: t.$fs-extralarge;
+            font-weight: t.$fw-extrabold;
+        }
+        
+        .guidelines-subtitle{ //FOREX MADE SIMPLE
+            font-weight: t.$fw-medium;
+        }
+    }
+    
+    .guidelines-header{ //Full Rules and Guidelines
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        font-weight: t.$fw-bold;
+        width: calc(100% - 2rem);
+        margin-block: 0 4rem;
+        text-align: center;
+        
+    }
+    
+    .guidelines-groups{
+        
+        margin: 0 auto;
+        width: min(calc(100% - 2rem), 1000px);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 25rem));
+        justify-content: center;
+        
+        @include r.respond(tablet){
+            margin-bottom: 4rem;
+            gap: 4rem;
+        }
+
+        .guidelines-group{
+
+            .guidelines-title{ //Placing trades.. Risk.. Receiving your earnings.. ect..
+                font-weight: t.$fw-bold;
+                margin-bottom: 1rem;
+                font-size: 1.5rem;
+            }
+
+            .guidelines-list{ //ul
+                width: min(calc(100% - 1rem), 500px);
+                margin: 0 auto 2.5rem;
+
+                @include r.respond(tablet){
+                    margin-bottom: 0;
+                }
+                
+                .guidelines-item{ //li
+                    padding: 0 0 1rem 0.2rem;
+
+                    &::marker{
+                        content: "~";
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .return-home{
+        background-color: red;
+        margin: 0 auto;
+        width: fit-content;
+    }
+}
