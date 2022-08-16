@@ -3,15 +3,41 @@
 .funding{
 
     text-align: center;
-
-    .form-title{
-        text-transform: uppercase;
-    }
+    color: c.$white;
     
-    form{
+    .form-group{
         background: c.$accent-clr;
-        width: min(calc(100% - 4rem), 1000px);
+        width: min(calc(100% - 2rem), 900px);
         padding: 2rem;
         margin: 0 auto;
+        
+        .form-title{
+            text-transform: uppercase;
+        }
+
+        form{
+            background-color: yellow;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(15rem, 17.5rem));
+            gap: 2rem;
+            justify-content: center;
+
+            // input,
+            // select{
+            //     // width: fit-content;
+            // }
+
+            input{
+                padding: 0.9rem;
+                border: none;
+            }
+
+            select{
+                padding: 0.6rem;
+                background-color: c.$white;
+                border: none
+            }
+        }
+
     }
 }
