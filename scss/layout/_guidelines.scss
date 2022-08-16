@@ -2,7 +2,7 @@
 @use "../abstracts/colors" as c;
 @use "../abstracts/responsive" as r;
 
-.guidelines{
+.guidelines, .header{
     margin-bottom: 4rem;
 
     @include r.respond(tablet){
