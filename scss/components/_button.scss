@@ -26,12 +26,18 @@
     }
 }
 
-// .btn__welcome{
+// .btn__guidelines{
+//     margin: 4rem;
 // }
 
 .btn__funded{
     background-color: c.$dark-grey;
     font-weight: 500;
+
+    &:hover{
+        background-color: c.$white;
+        color: c.$accent-clr;
+    }
 }
 
 .btn__ready{

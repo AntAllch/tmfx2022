@@ -8,6 +8,7 @@ footer{
     padding-block: 1.5rem;
     text-align: center;
     font-size: t.$fs-extrasmall;
+    margin-top: 6rem;
 
     @include r.respond(desktop){
         background-color: c.$accent-clr;   

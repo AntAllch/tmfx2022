@@ -2,29 +2,11 @@
 @use "../abstracts/colors" as c;
 @use "../abstracts/responsive" as r;
 
-.guidelines, .header{
-    margin-bottom: 4rem;
+.guidelines{
+    // margin-bottom: 4rem;
 
     @include r.respond(tablet){
-        margin-bottom: 6rem;
-    }
-    
-    .logo-wrapper{
-        background-color: c.$accent-clr;
-        color: c.$white;
-        padding-block: 1.5rem;
-        text-align: center;
-        text-transform: uppercase;
-        margin-bottom: 3rem;
-        
-        .guidelines-logo{ //TM-FX
-            font-size: t.$fs-extralarge;
-            font-weight: t.$fw-extrabold;
-        }
-        
-        .guidelines-subtitle{ //FOREX MADE SIMPLE
-            font-weight: t.$fw-medium;
-        }
+        // margin-bottom: 6rem;
     }
     
     .guidelines-header{ //Full Rules and Guidelines
