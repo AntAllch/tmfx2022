@@ -6,8 +6,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        funding: resolve(__dirname, 'funding/funding.html'),
-        guidelines: resolve(__dirname, 'guidelines/guidelines.html')                
+        funding: resolve(__dirname, 'pages/funding.html'),
+        guidelines: resolve(__dirname, 'pages/guidelines.html'),
+        thankyou: resolve(__dirname, 'pages/thankyou.html')                
       }
     }
   }
