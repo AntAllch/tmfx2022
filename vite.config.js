@@ -1,4 +1,4 @@
-import { resolve } from 'path'
+import { dirname, resolve } from 'path'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
@@ -6,7 +6,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        nested: resolve(__dirname, 'guidelines/guidelines.html')
+        funding: resolve(__dirname, 'funding/funding.html'),
+        guidelines: resolve(__dirname, 'guidelines/guidelines.html')                
       }
     }
   }
