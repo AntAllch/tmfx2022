@@ -1,3 +1,17 @@
-// .funding{
-//     // background-color: red;
-// }
+@use "../abstracts/colors" as c;
+
+.funding{
+
+    text-align: center;
+
+    .form-title{
+        text-transform: uppercase;
+    }
+    
+    form{
+        background: c.$accent-clr;
+        width: min(calc(100% - 4rem), 1000px);
+        padding: 2rem;
+        margin: 0 auto;
+    }
+}
