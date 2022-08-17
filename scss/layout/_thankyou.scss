@@ -1,0 +1,23 @@
+@use "../abstracts/colors" as c;
+@use "../abstracts/typography" as t;
+
+.thankyou{
+
+    padding: 0 2rem;
+
+    text-align: center;
+    // height: 100vh;
+
+        .thankyou-title,
+        .thankyou-subtitle{
+            text-transform: uppercase;
+            margin-bottom: 3rem;
+        }
+        
+        .thankyou-title{
+            font-weight: t.$fw-medium;
+            font-size: clamp(1.2rem, 5vw, 2rem);
+        }
+
+
+}

@@ -8,21 +8,30 @@ footer{
     padding-block: 1.5rem;
     text-align: center;
     font-size: t.$fs-extrasmall;
-    margin-top: 6rem;
-
+    
     @include r.respond(desktop){
         background-color: c.$accent-clr;   
         color: c.$white;
     }
-
+    
     svg{
         fill: c.$accent-clr;
         width: 50px;
         height: 50px;
         margin-bottom: 0.5rem;
-
+        
         @include r.respond(desktop){
             fill: c.$white;
         }
     }
+}
+
+.home-footer,
+.get-funded-footer,
+.guidelines-footer{
+    margin-top: 6rem;
+}
+
+.thankyou-footer{
+    margin-top: 8rem;
 }
