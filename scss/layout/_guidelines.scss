@@ -3,13 +3,9 @@
 @use "../abstracts/responsive" as r;
 
 .guidelines{
-    // margin-bottom: 4rem;
-
-    @include r.respond(tablet){
-        // margin-bottom: 6rem;
-    }
     
-    .guidelines-heading{ //Full Rules and Guidelines
+    //Full Rules and Guidelines
+    .guidelines-heading{
         font-size: clamp(2.5rem, 5vw, 3.5rem);
         font-weight: t.$fw-bold;
         width: calc(100% - 2rem);
@@ -21,11 +17,12 @@
     .guidelines-groups{
         
         margin: 0 auto;
-        width: min(calc(100% - 2rem), 1000px);
+        width: min(calc(100% - 2rem), 62.5rem);
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(12rem, 25rem));
         justify-content: center;
         
+        //600px
         @include r.respond(tablet){
             margin-bottom: 4rem;
             gap: 4rem;
@@ -33,21 +30,24 @@
 
         .guidelines-group{
 
-            .guidelines-title{ //Placing trades.. Risk.. Receiving your earnings.. ect..
+            //Placing trades.. Risk.. Receiving your earnings.. ect..
+            .guidelines-title{
                 font-weight: t.$fw-bold;
                 margin-bottom: 1rem;
                 font-size: 1.5rem;
             }
 
-            .guidelines-list{ //ul
-                width: min(calc(100% - 1rem), 500px);
+            //ul
+            .guidelines-list{
+                width: min(calc(100% - 1rem), 31.25rem);
                 margin: 0 auto 2.5rem;
 
                 @include r.respond(tablet){
                     margin-bottom: 0;
                 }
                 
-                .guidelines-item{ //li
+                //li
+                .guidelines-item{
                     padding: 0 0 1rem 0.2rem;
 
                     &::marker{
@@ -59,8 +59,8 @@
         }
     }
 
+    //"BACK TO MAIN PAGE" Button
     .return-home{
-        background-color: red;
         margin: 0 auto;
         width: fit-content;
     }

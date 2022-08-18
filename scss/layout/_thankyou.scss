@@ -3,17 +3,18 @@
 
 .thankyou{
 
-    padding: 0 2rem;
+    padding: 0 2rem; //Padding Up/Down Left/Right
 
     text-align: center;
-    // height: 100vh;
 
+        //THANK YOU FOR CHOOSING TM-FX / WE WILL CONTACT YOU SHORTLY
         .thankyou-title,
         .thankyou-subtitle{
             text-transform: uppercase;
             margin-bottom: 3rem;
         }
         
+        //THANK YOU FOR CHOOSING TM-FX
         .thankyou-title{
             font-weight: t.$fw-medium;
             font-size: clamp(1.2rem, 5vw, 2rem);

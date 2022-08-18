@@ -6,12 +6,14 @@
     display: none;
     overflow: hidden;
 
-    @include r.respond(desktop){ //1000px
+    //1200px
+    @include r.respond(desktop){
 
         display: flex;
         position: relative;
         text-transform: uppercase;
 
+        //TM-FX
         .logo{
             position: absolute;
             top: 20px;
@@ -22,16 +24,19 @@
             font-weight: 800;
         }
 
+        //FR / EE / YOU / RSELF / FUNDING FOR TRADERS
         .hero-text{
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
             margin-left: 13.8em;
 
-            span:first-of-type{ //FR
+            //FR
+            span:first-of-type{ 
                 margin-left: .9em;
             }
 
+            //FR / YOU
             span{
                 @include m.imagewebp(hero-img);
                 background-clip: text;
@@ -39,31 +44,35 @@
                 color: transparent;
             }
 
+            //FREE YOURSELF / FUNDING FOR TRADERS
             .hero-title, .hero-subtitle{
                 font-weight: 800;
             }
 
-            .hero-title{ //FREE YOURSELF
+            //FREE YOURSELF
+            .hero-title{
                 font-size: 10rem;
                 font-size: clamp(1rem, 12vw + 12rem, 10rem);
                 line-height: 0.9;
                 color: c.$white
             }
 
+            //FUNDING FOR TRADERS
             .hero-subtitle{
                 font-size: 1.75rem;
             }
 
         }
         
-        .hero-left{ //WHITE BLOCK
-            width: 576px;
-            max-width: 576px;
+        //WHITE BLOCK
+        .hero-left{
+            width: 36rem;
             height: 100vh;
             background-color: c.$white;
             position: absolute;
 
-            .page-tag{ //HOME
+            //HOME
+            .page-tag{
                 font-weight: 800;
                 text-transform: uppercase;
                 font-size: 1.1em;
@@ -72,12 +81,12 @@
                 position: relative;
                 margin-top: 70%;
                 left: 30px;
-                // transform: translateY(100%);
         
-                &::before{ //LONG BLACK BAR COMING FROM "HOME"
+                //LONG BLACK BAR COMING FROM "HOME"
+                &::before{
                     content: "";
-                    width: 4px;
-                    height: 300px;
+                    width: 0.25rem;
+                    height: 18.75rem;
                     background: linear-gradient(to bottom, c.$black, rgba(0, 0, 0, 0));
                     position: absolute;
                     top: 65px;
@@ -87,6 +96,7 @@
             }
         }
 
+        //Image of City
         .hero-right-img{
             width: 70%;
             height: 100vh;

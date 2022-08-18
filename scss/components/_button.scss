@@ -1,16 +1,17 @@
 @use "../abstracts/colors" as c;
-@use "../abstracts/transitions" as t;
+@use "../abstracts/transitions" as tr;
 @use "../abstracts/responsive" as r;
+@use "../abstracts/typography" as t;
 
 .btn{
-    padding: 15px 20px 15px 20px;
+    padding: 1rem 1.25rem 1rem 1.25rem ;
     text-transform: uppercase;
     background-color: c.$accent-clr;
     border: none;
-    font-weight: 800;
+    font-weight: t.$fw-extrabold;
     color: c.$white;
     cursor: pointer;
-    transition: t.$transition-bg-clr;
+    transition: tr.$transition-bg-clr;
     font-size: 1em;
     
     &:hover, &:focus-visible{
@@ -21,18 +22,16 @@
 .btn__hero{
     font-size: 1em;
 
-    @include r.respond(desktop){ //1000px
+    //1200px
+    @include r.respond(desktop){
         display: none;
     }
 }
 
-// .btn__guidelines{
-//     margin: 4rem;
-// }
 
 .btn__funded{
     background-color: c.$dark-grey;
-    font-weight: 500;
+    font-weight: t.$fw-medium;
 
     &:hover{
         background-color: c.$white;
@@ -42,5 +41,5 @@
 
 .btn__ready{
     font-size: 0.8em;
-    padding: 10px 20px 10px 20px;
+    padding: 0.625rem 1.25rem 0.625rem 1.25rem;
 }

@@ -9,17 +9,20 @@ footer{
     text-align: center;
     font-size: t.$fs-extrasmall;
     
+    //1200px
     @include r.respond(desktop){
         background-color: c.$accent-clr;   
         color: c.$white;
     }
     
+    //Facebook Logo
     svg{
         fill: c.$accent-clr;
-        width: 50px;
-        height: 50px;
+        width: 3.125rem;
+        height: 3.125rem;
         margin-bottom: 0.5rem;
         
+        //1200px
         @include r.respond(desktop){
             fill: c.$white;
         }
@@ -34,4 +37,20 @@ footer{
 
 .thankyou-footer{
     margin-top: 8rem;
+}
+
+.thankyou-footer,
+.get-funded-footer{
+
+    color: c.$accent-clr;   
+    background-color: c.$white;
+
+    //Facebook Logo
+    svg{
+        fill: c.$accent-clr;
+        width: 3.125rem;
+        height: 3.125rem;
+        margin-bottom: 0.5rem;
+    }
+
 }

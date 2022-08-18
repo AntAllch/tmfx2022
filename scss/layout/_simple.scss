@@ -6,6 +6,7 @@
     margin: 3rem auto 3rem;
     text-align: center;
     
+    //600px
     @include r.respond(tablet){
         margin-top: 0;
         margin: 10rem auto 10rem;
@@ -16,7 +17,6 @@
     }
     
     .simple-title{
-        // font-size: t.$fs-large;
         font-size: clamp(1.25rem, 3.9vw + 0.2rem, 1.875rem);
         font-weight: t.$fw-extrabold;
         text-transform: uppercase;
@@ -26,6 +26,7 @@
 
         margin-inline: auto;
         
+        //1200px
         @include r.respond(desktop){
             max-width: 60ch;
         }

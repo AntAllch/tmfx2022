@@ -7,16 +7,13 @@
     margin: 0 auto 6rem;
     width: min(calc(100vw - 3.75rem), 73em);
 
+    //START BY CHOOSING ONE OF OUR EVALUATION ACCOUNTS
     .accounts-title{
         font-size: clamp(1rem, 3vw + 0.2rem, 1.5rem);
         text-transform: uppercase;
         font-weight: t.$fw-extrabold;
         margin-bottom: 1.5em;
         text-align: center;
-
-        @include r.respond(desktop){
-            // text-align: left;
-        }
     }
 
     .accounts-cards{
@@ -33,33 +30,40 @@
             background-color: c.$accent-clr;
             padding: 2em 1em;
 
+            //$52,000 / "ONE TIME FEE £625"
             span, .account-card__fee{
                 font-weight: t.$fw-extrabold;
             }
 
+            //$52,000 FULLY FUNDED ACCOUNT / EVALUATION SIZE $13,000 / ONE TIME FEE £625
             .account-card__heading,
             .account-card__subheading,
             .account-card__fees{
                 text-transform: uppercase;    
             }
 
+            //.account-card__fees - "ONE TIME FEE £625"
             .account-card__funding,
             .account-card__desc-group,
             .account-card__fees{
                 margin-bottom: 1.5em;
             }
 
-            .account-card__subheading, .account-card__heading{
+            //$52,000 FULLY FUNDED ACCOUNT / EVALUATION SIZE $13,000
+            .account-card__heading,
+            .account-card__subheading{
                 font-size: 0.9em;
                 font-weight: t.$fw-bold;
             }
 
             .account-card__funding{
 
+                //FULLY FUNDED ACCOUNT
                 .account-card__heading{
                     margin-bottom: 0.5em;
                     font-size: 1.1em;
 
+                    //$52,000 / $40,000 / $28,000 / $20,000
                     span{
                         font-size: 1.5rem;
                     }
@@ -72,9 +76,8 @@
 
                     .account-card__desc-group{
 
+                        //Profit Target $910 - 7%.. Max Drawdown - $520 - 4%
                         .account-card__desc{
-
-                            // background-color: red;
                             font-size: 0.9em;
                         }
 
@@ -84,11 +87,13 @@
 
             .account-card__fees{
                 
+                //ONE TIME FEE £625
                 .account-card__fee{
                     margin-bottom: 0.5em;
                     font-size: 1.1em;
                 }
 
+                //NO MONTHLY FEES
                 p:nth-of-type(2){
                     font-weight: t.$fw-bold;
                     font-size: 0.9em;

@@ -1,19 +1,22 @@
 @use "../abstracts/colors" as c;
 @use "../abstracts/typography" as t;
 
+//Blue bar containing .header-logo
 .logo-wrapper{
     background-color: c.$accent-clr;
     color: c.$white;
-    padding-block: 1.5rem;
+    padding-block: 1.5rem; //Padding top and bottom
     text-align: center;
     text-transform: uppercase;
     
-    .header-logo{ //TM-FX
+    //TM-FX
+    .header-logo{
         font-size: t.$fs-extralarge;
         font-weight: t.$fw-extrabold;
     }
     
-    .header-subtitle{ //FOREX MADE SIMPLE
+    //FOREX MADE SIMPLE
+    .header-subtitle{
         font-weight: t.$fw-medium;
     }
 }

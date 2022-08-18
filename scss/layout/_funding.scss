@@ -4,21 +4,17 @@
 .funding{
 
     text-align: center;
-    // color: c.$white;
-    
     .form-group{
-        // background: c.$accent-clr;
-        width: min(calc(100% - 2rem), 900px);
-        // padding: ;
+        width: min(calc(100% - 2rem), 56.25rem);
         margin: 0 auto;
         
+        //TM-FX FUNDING
         .form-title{
             text-transform: uppercase;
             font-weight: t.$fw-bold;
         }
 
         form{
-            // background-color: yellow;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(15rem, 17.5rem));
             gap: 4rem;
@@ -39,7 +35,6 @@
             select{
                 padding: 0.85rem;
                 background-color: c.$white;
-                // border: none
             }
 
             ::placeholder{
@@ -47,6 +42,7 @@
             }
         }
 
+        //*Please note, if you are based outside of the UK...
         .form-disclaimer{
             width: min(calc(100% - 1rem), 70ch);
             margin: 0 auto;
