@@ -1,6 +1,7 @@
 // MAKE SURE YOU HAVE AN "_INDEX.SCSS" PARTIAL IN EACH FOLDER, WITH @FORWARD "FILENAME"; FOR EACH PARTIAL BEING FORWARDED
 
-@forward "/scss/abstracts/";
-@forward "/scss/reset/";
-@forward "/scss/layout/";
-@forward "/scss/components/";
+// EXAMPLES OF FORWARDING PARTIALS FROM OTHER FOLDERS
+// @forward "/scss/abstracts/";
+// @forward "/scss/reset/";
+// @forward "/scss/layout/";
+// @forward "/scss/components/";
